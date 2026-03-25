@@ -44,8 +44,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
+  color: white;
 }
 
 /* BUTTON */
@@ -63,16 +63,13 @@ header {
   text-align: center;
 }
 
-.dark {
-  background: #fff;
-}
-
 /* CARDS */
 .cards {
   display: flex;
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -83,66 +80,37 @@ header {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+}
+
+/* STATS */
+.stats {
+  background: linear-gradient(135deg, var(--orange), var(--green));
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
 }
 
 /* FORM */
-.form-wrapper {
-  max-width: 500px;
+.simple-form {
+  max-width: 400px;
   margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-/* INPUT GROUP */
-.input-group {
-  position: relative;
-  margin-bottom: 20px;
+.simple-form input,
+.simple-form select {
+  padding: 12px;
+  margin: 10px 0;
 }
 
-.input-group input,
-.input-group select,
-.input-group textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  outline: none;
-}
-
-/* LABEL */
-.input-group label {
-  position: absolute;
-  left: 12px;
-  top: 14px;
-  color: #888;
-  transition: 0.3s;
-  background: white;
-  padding: 0 5px;
-}
-
-/* FLOAT EFFECT */
-.input-group input:focus + label,
-.input-group input:valid + label,
-.input-group textarea:focus + label,
-.input-group textarea:valid + label,
-.input-group select:focus + label,
-.input-group select:valid + label {
-  top: -8px;
-  font-size: 12px;
-  color: var(--orange);
-}
-
-/* BUTTON */
-.btn-submit {
-  width: 100%;
-  padding: 14px;
-  background: linear-gradient(135deg, var(--orange), var(--green));
+.simple-form button {
+  background: var(--orange);
   color: white;
+  padding: 12px;
   border: none;
-  border-radius: 8px;
 }
 
 /* FOOTER */
