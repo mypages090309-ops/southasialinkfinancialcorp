@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SAFC Financing</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Asialink Financing Corporation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
   <nav class="navbar">
-    <h2>SAFC</h2>
-    <ul>
+    <h2 class="logo">SAFC</h2>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
       <li><a href="#stats">Stats</a></li>
       <li><a href="#contact">Apply</a></li>
     </ul>
@@ -21,31 +22,71 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
   <div class="hero-content">
-    <h1>Fast & Trusted Financing</h1>
-    <p>Truck • SUV • OR/CR Sangla • Land Title Loans</p>
+    <h1>South Asialink Financing Corporation</h1>
+    <p>
+      Fast, Reliable & Trusted Financing Solutions for Truck, SUV, OR/CR Sangla, and Land Title Loans.
+    </p>
     <a href="#contact" class="btn">Apply Now</a>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-  <h2>Our Services</h2>
+  <h2>Our Financing Services</h2>
   <div class="cards">
 
-    <div class="card">🚛 Truck Loans</div>
-    <div class="card">🚙 SUV Loans</div>
-    <div class="card">📄 OR/CR Sangla</div>
-    <div class="card">🏡 Land Title Loan</div>
+    <div class="card">
+      <h3>🚛 Truck Loans</h3>
+      <p>Brand new & second-hand truck financing with flexible payment terms.</p>
+    </div>
+
+    <div class="card">
+      <h3>🚙 SUV Loans</h3>
+      <p>Own your dream SUV with low downpayment and fast approval.</p>
+    </div>
+
+    <div class="card">
+      <h3>📄 OR/CR Sangla</h3>
+      <p>Instant cash using your vehicle OR/CR as collateral.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏡 Land Title Loan</h3>
+      <p>Get higher loan value using your land title.</p>
+    </div>
 
   </div>
 </section>
 
-<!-- STATS -->
+<!-- WHY US -->
+<section id="why" class="section dark">
+  <h2>Why Choose Us?</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>⚡ Fast Approval</h3>
+      <p>Same-day approval for qualified applicants.</p>
+    </div>
+
+    <div class="card">
+      <h3>💯 Trusted Company</h3>
+      <p>Thousands of satisfied clients nationwide.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Easy Process</h3>
+      <p>Simple application via online or Messenger.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS (NEW 🔥) -->
 <section id="stats" class="stats">
   <div class="stat-box">
-    <h2>5000+</h2>
+    <h2>5,000+</h2>
     <p>Approved Clients</p>
   </div>
   <div class="stat-box">
@@ -53,48 +94,85 @@
     <p>Years Experience</p>
   </div>
   <div class="stat-box">
-    <h2>24hrs</h2>
+    <h2>24 Hours</h2>
     <p>Fast Approval</p>
   </div>
 </section>
 
-<!-- CALCULATOR -->
+<!-- REQUIREMENTS (NEW 🔥) -->
 <section class="section">
-  <h2>Loan Calculator</h2>
-  <div class="calculator">
-    <input type="number" id="amount" placeholder="Loan Amount">
-    <input type="number" id="months" placeholder="Months">
-    <button onclick="calc()">Compute</button>
-    <h3 id="result"></h3>
+  <h2>Basic Requirements</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>📌 Valid ID</h3>
+      <p>Government-issued ID required.</p>
+    </div>
+
+    <div class="card">
+      <h3>📌 Proof of Income</h3>
+      <p>Salary slip, remittance, or business proof.</p>
+    </div>
+
+    <div class="card">
+      <h3>📌 Collateral</h3>
+      <p>Vehicle OR/CR or Land Title.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- FORM -->
-<section id="contact" class="section">
-  <div class="form-box">
-    <h2>Apply Now</h2>
-    <form id="form">
-      <input type="text" id="name" placeholder="Full Name" required>
-      <input type="text" id="phone" placeholder="Phone Number" required>
+<!-- TESTIMONIALS (NEW 🔥) -->
+<section class="section dark">
+  <h2>Client Feedback</h2>
+  <div class="cards">
 
-      <select id="loan">
-        <option>Truck Loan</option>
-        <option>SUV Loan</option>
-        <option>OR/CR Sangla</option>
-        <option>Land Title Loan</option>
-      </select>
+    <div class="card">
+      <p>“Mabilis approval! Thank you SAFC!”</p>
+      <h4>- Juan D.</h4>
+    </div>
 
-      <button type="submit">Submit Application</button>
-    </form>
+    <div class="card">
+      <p>“Legit at mabilis kausap. Highly recommended.”</p>
+      <h4>- Maria S.</h4>
+    </div>
+
+    <div class="card">
+      <p>“Nakuha ko agad loan ko within 1 day.”</p>
+      <h4>- Carlo P.</h4>
+    </div>
+
   </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" class="section">
+  <h2>Apply Now</h2>
+  <form id="form">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <input type="email" placeholder="Email Address">
+
+    <select id="loan">
+      <option value="">Select Loan Type</option>
+      <option>Truck Loan</option>
+      <option>SUV Loan</option>
+      <option>OR/CR Sangla</option>
+      <option>Land Title Loan</option>
+    </select>
+
+    <textarea placeholder="Message / Details"></textarea>
+
+    <button type="submit">Submit Application</button>
+  </form>
 </section>
 
 <footer>
-  <p>© 2026 SAFC Financing</p>
+  <p>© 2026 South Asialink Financing Corporation</p>
 </footer>
 
-<a href="https://www.facebook.com/safcgapan" class="messenger" target="_blank">
-💬 Chat Now
+<a href="https://www.facebook.com/safcgapan" target="_blank" class="messenger">
+  💬 Chat with us
 </a>
 
 <script src="script.js"></script>
