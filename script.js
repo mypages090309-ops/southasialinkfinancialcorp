@@ -1,13 +1,12 @@
 const API_URL = "https://safcworker.bagongacctt.workers.dev/";
 
-// FORM
 document.getElementById("form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const data = {
-    name: name.value,
-    phone: phone.value,
-    loan: loan.value
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    loan: document.getElementById("loan").value
   };
 
   await fetch(API_URL, {
@@ -16,15 +15,5 @@ document.getElementById("form").addEventListener("submit", async (e) => {
     body: JSON.stringify(data)
   });
 
-  alert("Application Sent!");
+  alert("✅ Application Submitted!");
 });
-
-// CALCULATOR
-function calc() {
-  let a = amount.value;
-  let m = months.value;
-
-  let monthly = (a * 1.2) / m;
-
-  result.innerText = "₱" + monthly.toFixed(2) + " / month";
-}
