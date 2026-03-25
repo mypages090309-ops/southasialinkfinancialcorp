@@ -1,5 +1,6 @@
 const API_URL = "https://safcworker.bagongacctt.workers.dev/";
 
+// FORM SUBMIT (SAVE TO D1)
 document.getElementById("form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -10,7 +11,7 @@ document.getElementById("form").addEventListener("submit", async (e) => {
   };
 
   try {
-    await fetch(API_URL, {
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -18,25 +19,33 @@ document.getElementById("form").addEventListener("submit", async (e) => {
       body: JSON.stringify(data)
     });
 
-    alert("✅ Application submitted!");
-    document.getElementById("form").reset();
+    if (res.ok) {
+      alert("✅ Application submitted successfully!");
+      document.getElementById("form").reset();
+    } else {
+      alert("❌ Failed to submit");
+    }
 
-  } catch (err) {
-    alert("❌ Error");
+  } catch (error) {
+    console.error(error);
+    alert("❌ Network error");
   }
 });
 
-function calc() {
-  let a = document.getElementById("amount").value;
-  let m = document.getElementById("months").value;
 
-  if (!a || !m) {
-    document.getElementById("result").innerText = "Fill all fields";
+// LOAN CALCULATOR
+function calc() {
+  let amount = document.getElementById("amount").value;
+  let months = document.getElementById("months").value;
+
+  if (!amount || !months) {
+    document.getElementById("result").innerText = "Please fill all fields";
     return;
   }
 
-  let monthly = (a * 1.2) / m;
+  let interest = 0.02; // 2% monthly
+  let monthly = (amount * (1 + interest * months)) / months;
 
   document.getElementById("result").innerText =
-    "Monthly: ₱" + monthly.toFixed(2);
+    "Estimated Monthly: ₱" + monthly.toFixed(2);
 }
