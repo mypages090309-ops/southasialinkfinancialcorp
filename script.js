@@ -1,4 +1,7 @@
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  alert("Message sent! We will contact you soon.");
+
+  alert("Application submitted! We will contact you shortly.");
+
+  this.reset();
 });
