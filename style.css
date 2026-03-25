@@ -21,6 +21,7 @@ header {
   width: 100%;
   background: white;
   padding: 15px 40px;
+  z-index: 100;
 }
 
 .navbar {
@@ -37,7 +38,7 @@ header {
   margin-left: 20px;
 }
 
-/* HERO */
+/* HERO FIX 🔥 */
 .hero {
   height: 100vh;
   background: linear-gradient(135deg, var(--orange), var(--green));
@@ -46,15 +47,31 @@ header {
   align-items: center;
   text-align: center;
   color: white;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 25px;
 }
 
 /* BUTTON */
 .btn {
   background: white;
   color: var(--orange);
-  padding: 12px 25px;
+  padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
+  font-weight: bold;
 }
 
 /* SECTION */
