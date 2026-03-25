@@ -16,60 +16,83 @@ body {
 }
 
 /* NAV */
-header {
+.header {
   position: fixed;
   width: 100%;
   background: white;
-  padding: 15px 30px;
+  padding: 15px 50px;
   z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.btn-nav {
+  background: var(--orange);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: linear-gradient(135deg, var(--orange), var(--green));
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+  padding: 120px 60px;
+  background: #fff;
 }
 
-.hero-content {
-  max-width: 700px;
+.hero-text {
+  max-width: 500px;
 }
 
-/* BUTTON */
-.btn {
-  background: white;
+.hero h1 {
   color: var(--orange);
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
+  font-size: 2.5rem;
 }
 
-/* SECTION */
-.section {
-  padding: 100px 20px;
+.hero h2 {
+  color: var(--green);
+  margin: 15px 0;
+}
+
+.hero-image img {
+  width: 450px;
+}
+
+.btn-main {
+  background: var(--orange);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* SERVICES */
+.services {
+  padding: 80px 50px;
   text-align: center;
 }
 
-/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 20px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
-/* CARD */
 .card {
   background: white;
   padding: 25px;
@@ -82,43 +105,159 @@ header {
   transform: translateY(-8px);
 }
 
-/* DARK */
-.dark {
-  background: #fff;
+.card button {
+  margin-top: 15px;
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 8px 12px;
 }
 
-/* CTA */
-.cta {
-  background: linear-gradient(135deg, var(--orange), var(--green));
-  color: white;
-  padding: 60px;
+/* WHY */
+.why {
+  display: flex;
+  align-items: center;
+  padding: 80px 50px;
+  gap: 50px;
+  background: #f3ece6;
+}
+
+.why-image img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stats div {
   text-align: center;
 }
 
-/* FORM */
-.form {
-  max-width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+.stats h3 {
+  color: var(--orange);
 }
 
-.form input,
-.form select {
+/* STEPS */
+.steps {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.step-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.step {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FORM */
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 50px;
+  background: #f3ece6;
+}
+
+.form-text {
+  max-width: 400px;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+form input,
+form select {
+  width: 100%;
   padding: 12px;
   margin: 10px 0;
 }
 
-.form button {
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+form button {
   background: var(--orange);
   color: white;
   padding: 12px;
   border: none;
 }
 
-/* FOOTER */
-footer {
-  background: #111;
+/* TRUST */
+.trust {
+  text-align: center;
+  padding: 80px 50px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+  background: var(--orange);
   color: white;
-  padding: 20px;
+  padding: 80px;
+  text-align: center;
+}
+
+.testimonial-box {
+  border: 1px solid white;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* FOOTER */
+.footer {
+  background: #f36621;
+  color: white;
+  padding: 60px 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 30px;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why {
+    flex-direction: column;
+  }
+
+  .form-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step-grid {
+    flex-direction: column;
+  }
+
 }
