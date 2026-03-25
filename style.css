@@ -259,5 +259,16 @@ form button {
   .step-grid {
     flex-direction: column;
   }
-
+.popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #111;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: 0.5s;
+  z-index: 999;
+}
 }
