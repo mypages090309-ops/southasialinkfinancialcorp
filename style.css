@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
 }
 
+/* NAVBAR */
 header {
   background: #0a1f44;
   padding: 15px 30px;
@@ -35,6 +36,7 @@ header {
   text-decoration: none;
 }
 
+/* HERO */
 .hero {
   height: 90vh;
   background: linear-gradient(to right, #0a1f44, #1c3d73);
@@ -43,6 +45,7 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 20px;
 }
 
 .hero h1 {
@@ -53,14 +56,17 @@ header {
   margin: 15px 0;
 }
 
+/* BUTTON */
 .btn {
   background: #ffb400;
-  padding: 10px 20px;
+  padding: 12px 25px;
   text-decoration: none;
   color: black;
   border-radius: 5px;
+  font-weight: bold;
 }
 
+/* SECTION */
 .section {
   padding: 60px 30px;
   text-align: center;
@@ -70,6 +76,7 @@ header {
   background: #f4f4f4;
 }
 
+/* CARDS */
 .cards {
   display: flex;
   justify-content: center;
@@ -81,11 +88,22 @@ header {
 .card {
   background: white;
   padding: 20px;
-  width: 250px;
+  width: 260px;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
+.card h3 {
+  margin-bottom: 10px;
+  color: #0a1f44;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FORM */
 form {
   max-width: 400px;
   margin: auto;
@@ -93,22 +111,36 @@ form {
   flex-direction: column;
 }
 
-form input, form textarea {
+form input, form textarea, form select {
   margin: 10px 0;
-  padding: 10px;
+  padding: 12px;
 }
 
 button {
   background: #0a1f44;
   color: white;
-  padding: 10px;
+  padding: 12px;
   border: none;
   cursor: pointer;
 }
 
+/* FOOTER */
 footer {
   background: #0a1f44;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* MESSENGER BUTTON */
+.messenger {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0084ff;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
 }
